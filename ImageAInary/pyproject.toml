@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "imageainary"
+version = "0.1.0"
+description = "Stable diffusion based style transfer tool"
+authors = ["Pradipta Deb <deb.pradipta@gmail.com>"]
+readme = "README.md"
+packages = [{include = "imageainary"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+torch = ">=2.0.0"
+torchvision = ">=0.15.0"
+diffusers = ">=0.25.0"
+transformers = ">=4.30.0"
+accelerate = ">=0.15.0"
+controlnet_aux = ">=0.0.7"
+pillow = ">=9.0.0"
+numpy = ">=1.24.0"
+tqdm = ">=4.65.0"
+matplotlib = ">=3.7.0"
+typer = ">=0.9.0"
+rich = ">=13.0.0"
+scipy = ">=1.10.0"
+mediapipe = "^0.10.21"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+mypy = "^1.4.1"
+pylint = "^2.17.5"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+
+[tool.poetry.scripts]
+imageainary = "imageainary.cli:app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
